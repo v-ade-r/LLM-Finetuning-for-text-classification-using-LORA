@@ -12,7 +12,7 @@ Instead of explicitly computing ΔW, LoRA directly learns two smaller matrices, 
 Original weights during the training are untouched. A and B are only trained. After training AB are multiplicated creating matrix with the same dimensions as the original weights matrix. This matrix is then added to the original weights matrix.
 Here, A and B are much smaller in size compared to ΔW, significantly reducing memory and computational overhead. This efficient approach makes LoRA ideal for adapting large models to new tasks while maintaining scalability and performance.
 
-## **Justification:**
+## **Justification of this code**
 While this approach has been widely adopted, it often requires custom tweaks for custom data which is not in the dataset format. Here, you only need to provide the file path and define a prompt tailored to your problem and data. Additionally, this guide outlines two approaches: the first utilizes the model's original head, while the second introduces a modified head with label mapping.
 
 ## **Usage tips**

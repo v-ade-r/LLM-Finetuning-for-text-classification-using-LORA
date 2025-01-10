@@ -2,6 +2,16 @@
 
 This is the Schematic Blueprint for LLM Finetuning for semantic text classification using LORA. 
 
+## LORA - theory
+LoRA (Low-Rank Adaptation), introduced by Hu et al., optimizes model fine-tuning by decomposing weight updates, ΔW, into a low-rank representation. Typically during backpropagation model learns ΔW matrix containing updates for the original weights which minimize the loss function during training.
+
+W(updated) = W + ΔW
+
+Instead of explicitly computing ΔW, LoRA directly learns two smaller matrices, A and B, during training. Decomposition can be described as ΔW = AB (Matrix multiplication of A and B gives ΔW because, A has the same number of rows as ΔW and B has the same number of columns as ΔW). The key hiperparameter is r - rank. If ΔW has 5,000 rows and 10,000 columns, it stores 50,000,000 parameters. If we choose A and B with r=8, then A has 5,000 rows and 8 columns, and B has 8 rows and 10,000 columns, that's 5,000×8 + 8×10,000 = 120,000 parameters, which is about 416× less than 50,000,000.
+
+Original weights during the training are untouched. A and B are only trained. After training AB are multiplicated creating matrix with the same dimensions as the original weights matrix. This matrix is then added to the original weights matrix.
+Here, A and B are much smaller in size compared to ΔW, significantly reducing memory and computational overhead. This efficient approach makes LoRA ideal for adapting large models to new tasks while maintaining scalability and performance.
+
 ## **Justification:**
 While this approach has been widely adopted, it often requires custom tweaks for custom data which is not in the dataset format. Here, you only need to provide the file path and define a prompt tailored to your problem and data. Additionally, this guide outlines two approaches: the first utilizes the model's original head, while the second introduces a modified head with label mapping.
 

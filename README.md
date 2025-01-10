@@ -13,7 +13,7 @@ Original weights during the training are untouched. A and B are only trained. Af
 Here, A and B are much smaller in size compared to ΔW, significantly reducing memory and computational overhead. This efficient approach makes LoRA ideal for adapting large models to new tasks while maintaining scalability and performance.
 
 ## **Justification of this code**
-While this approach has been widely adopted, it often requires custom tweaks for custom data which is not in the dataset format. Here, you only need to provide the file path and define a prompt tailored to your problem and data. Additionally, this guide outlines two approaches: the first utilizes the model's original head, while the second introduces a modified head with label mapping.
+While this approach has been widely adopted, it often requires some tweaks for custom data which is not in the dataset format. Here, you only need to provide the file path and define a prompt tailored to your problem and data. Additionally, this guide outlines two approaches: the first utilizes the model's original head, while the second introduces a modified head with label mapping.
 
 ## **Usage tips**
 ### I. LORA with model's original head

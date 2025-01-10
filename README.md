@@ -6,7 +6,7 @@ This is the Schematic Blueprint for LLM Finetuning for semantic text classificat
 Although there are many examples of this approach being used, usually there are some tweaks needed to be made for custom data not in the dataset format. Essentialy you only need to provide a path to files, and fill in the prompt matching your problem and data.
 Moreover I present the blueprint for a prompt structure in 1st approach and for the use of different model head and label mapping in 2nd approach.
 
-## **Usage tips:**
+## **Usage tips**
 ### I. LORA with model's original head
   1. Set your private Hugginface token.
   2. Set a path for your train and dev data files in .xlsx (create DataFrame from whatever format file you like)
@@ -24,7 +24,7 @@ Moreover I present the blueprint for a prompt structure in 1st approach and for 
   7. Start training, save the model, evaluate and done!
 
 
-### II. LORA with model's changed head.
+### II. LORA with model's changed head
   1. Set your private Hugginface token.
   2. Set a path for your train and dev data files in .tsv or .csv (create DataFrame from whatever format file you like)
   3. Map your semantic labels to integers.
@@ -36,3 +36,7 @@ Moreover I present the blueprint for a prompt structure in 1st approach and for 
     'per_device_train_batch_size'), to be able to train smoothly on smaller GPUs.
   9. If you want Set output_dir in TrainingArguments which will be also peft_model_id later in evaluation.
   10. Start training, save the model, evaluate and done!
+
+## References
+https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms
+https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst

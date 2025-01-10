@@ -38,8 +38,8 @@ While this approach has been widely adopted, it often requires some tweaks for c
   2. Set a path to your train and dev data files in .tsv or .csv (create DataFrame from whatever format file you like)
   3. Map possible semantic labels to integers.
   4. Rename the column containing labels to 'label'!!!
-  5. Set num_labels variable accoringly!!!!
-  6. In tokenize_function use as many "examples["custom_column_name"]" objects as as you have input column (e.g. if comparing 2 sentences from 2 columns, then use examples["column1_name"], examples["column2_name"])
+  5. Set num_labels variable accordingly!!!!
+  6. In tokenize_function use as many "examples["custom_column_name"]" objects as as you have input columns (e.g. if comparing 2 sentences from 2 columns, then use examples["column1_name"], examples["column2_name"])
   7. Select an open source model having in mind GPU RAM limitations (3B model is roughly the biggest possible for 8GB single GPU)
   8. Set training parameters. These are optimal according to Sebastian Raschka. You probably need to reduce 'lora_alpha' and 'r' numbers (possibly also 'num_train_epochs',
     'per_device_train_batch_size'), to be able to train smoothly on smaller GPUs.

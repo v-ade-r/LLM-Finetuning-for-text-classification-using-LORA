@@ -39,4 +39,5 @@ Moreover I present the blueprint for a prompt structure in 1st approach and for 
 
 ## References
 https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms
+
 https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst

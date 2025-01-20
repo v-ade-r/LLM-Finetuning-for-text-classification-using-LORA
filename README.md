@@ -1,4 +1,4 @@
-# LLM-Finetuning-for-text-classification-using-LORA
+# LLM-Finetuning-using-LORA
 
 This is the Schematic Blueprint for LLM Finetuning for semantic text classification using LORA. 
 

@@ -1,6 +1,6 @@
 # LLM-Finetuning-using-LORA
 
-This is the Schematic Blueprint for LLM Finetuning for semantic text classification using LORA. 
+This is the Schematic Blueprint for Finetuning LLM (e.g. Qwen or Llama) for semantic text classification using LORA. 
 
 ## LORA - theory
 LoRA (Low-Rank Adaptation), introduced by Hu et al., optimizes model fine-tuning by decomposing weight updates, ΔW, into a low-rank representation. Typically during backpropagation model learns ΔW matrix containing updates for the original weights which minimize the loss function during training.
